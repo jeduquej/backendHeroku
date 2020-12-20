@@ -23,7 +23,7 @@ app.use(bodyPArser.urlencoded({ extended: true}));
 //primera ruta
 app.use('/api', apiRouter);
 
-app.set('PORT', 3000);
+app.set('PORT', process.env.PORT || 3000);
 
 app.listen(app.get('PORT'), ()=>{
     console.log('server up'); 
